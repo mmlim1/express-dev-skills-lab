@@ -1,5 +1,5 @@
 import { Skill } from "../models/skills.js";
-import { skills } from "../data/skill-data.js"
+// import { skills } from "../data/skill-data.js"
 
 // function index (req, res) {
 //   Skill.find({})
@@ -13,6 +13,7 @@ function index(req, res) {
   .then(skills => {
     res.render('skills/index', {
       skills: skills,
+      time: req.time
     })
   })
   .catch(error => {
@@ -47,9 +48,20 @@ function show(req, res) {
   }) 
 }
 
+function deleteSkill(req, res) {
+  Skill.findByIdAndDelete(req.params.id)
+  .then(skill => {
+    res.redirect('/skills')
+  })
+  .catch(error => {
+    res.redirect('/skills')
+  })
+} 
+
 export {
   index,
   newSkill as new,
   create,
-  show
+  show,
+  deleteSkill as delete,
 }
