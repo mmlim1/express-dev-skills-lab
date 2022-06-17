@@ -1,4 +1,4 @@
-const basketballTeams = [
+const skills = [
   {team: 'Portland Trailblazers', best: false},
   {team: 'New York Knicks', best: false},
   {team: 'Los Angeles Lakers', best: true},
@@ -7,5 +7,5 @@ const basketballTeams = [
 ]
 
 export {
-  basketballTeams
+  skills
 }

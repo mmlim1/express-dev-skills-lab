@@ -11,12 +11,12 @@
   <ul>
     <% skills.forEach(skill => { %>
       <li>
-				<%= skill.team %> 
+				<a href="/skills/<%= skill._id %> "><%= skill.team %></a> 
 				- 
 				<%= skill.best ? 'true' : 'false' %>
 			</li>
     <% }) %>
   </ul>
-  <a href="/todos/new">Add To-Do</a>
+  <a href="/skills/new">Add To-Do</a>
 </body>
 </html>
