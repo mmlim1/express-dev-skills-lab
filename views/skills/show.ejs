@@ -7,7 +7,10 @@
   <title>Express-Skills</title>
 </head>
 <body>
-  <h1>Show View</h1>
-  <h2><%= skill.team %></h2>
+  <h1>Skills</h1>
+  <h2>Skill #<%= skill._id %></h2>
+  <h3><%= skill.team %></h3>
+  <p>Complete: <%= skill.best ? 'Yes' : 'No' %></p>
+	<a href="/skills">Go back</a>
 </body>
 </html>
